@@ -29,6 +29,7 @@
             <!--<input type="checkbox" v-bind:id="'task_'+task.id">-->
             <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_'+task.id">
             <label v-bind:for="'task_'+task.id">{{ task.name }}</label>
+            <router-link :to="'/show/' + task.id">詳細</router-link>
           </li>
         </ul>
       </div>
@@ -48,7 +49,7 @@
           <li v-for="task in tasks" v-if="task.is_done" v-bind:id="'row_task_'+task.id" class="collection-item">
             <input type="checkbox" v-bind:id="'task_'+task.id" checked="checked">
             <label v-bind:for="'task_'+task.id" class="line-through">{{ task.name }}</label>
-            <!--<a v-bind:href="'/show/'+task.id">詳細</a>-->
+            <router-link :to="'/show/'+task.id">詳細</router-link>
           </li>
         </ul>
       </div>
