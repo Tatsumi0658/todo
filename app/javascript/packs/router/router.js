@@ -13,6 +13,6 @@ export default new VueRouter({
     { path: '/', component: Index },
     { path: '/about', component: About },
     { path: '/contact', component: Contact },
-    { path: '/show/:id', component: Show},
+    { path: '/show/:id', component: Show, props: route=>({id: Number(route.params.id)})},
   ],
 })
