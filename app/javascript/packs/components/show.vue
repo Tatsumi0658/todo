@@ -1,7 +1,7 @@
 <template>
   <div id="post">
     {{ $route.params.id }}<br>
-    {{ task.name }}
+    <!--{{ task.name }}*/-->
   </div>
 </template>
 
